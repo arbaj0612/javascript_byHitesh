@@ -4,8 +4,8 @@
 // console.log(2>=1);
 // console.log(2!=1);
 
-// console.log("2" > 1);
-// console.log("2" > 1);
+ //console.log("2" > 11);
+ //console.log("2" < 1);
 
 // always remember that the equality check (==) and comparison opertor ("<,>") always work differently
 // console.log(null > 0);
