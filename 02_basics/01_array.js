@@ -50,3 +50,6 @@ const myn2 = newArr.splice(1,3)
 const numArr = [1, 2, 3, 4, 5]
 // console.log(numArr.join()); // 1,2,3,4,5 // here typeof datatype is string 
 // console.log(typeof numArr);  // object
+
+
+
