@@ -49,4 +49,39 @@ function loginNewUser (username = "user") {  // default parameter
     return `${username} just logged in`
 }
 
-console.log(loginNewUser());
+// console.log(loginNewUser());
+
+
+
+// use of rest operator in functions
+
+function newNum (...nums) {
+    return nums
+}
+
+// console.log(newNum(200,100,320,450));
+
+
+const newUser = {
+    fname: "Arbaj",
+    price: 300
+}
+
+function handleObj (anyObj){
+    console.log(`username is ${anyObj.fname} and price is ${anyObj.price}`);
+}
+
+handleObj(newUser)
+     // OR
+
+// handleObj({fname:"junaid", price: 450})
+
+const myNewArray = [200, 300, 100, 400, 500]
+
+function fReturnValue (getArray){
+    return getArray[0]
+}
+
+console.log(fReturnValue(myNewArray)); // Or
+
+console.log(fReturnValue([100, 300, 100, 400, 500]));
