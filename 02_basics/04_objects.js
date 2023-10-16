@@ -57,12 +57,48 @@ const users = [
 // console.log(users[1].email) // accesing 
 
 
-console.log(instaUser);
+// console.log(instaUser);
 
-console.log(Object.keys(instaUser))  // we will get all keys un array format
+// console.log(Object.keys(instaUser))  // we will get all keys un array format
 
-console.log(Object.values(instaUser)); // we will get all values un array format
+// console.log(Object.values(instaUser)); // we will get all values un array format
 
-console.log((Object.entries(instaUser))); // here we get all keys and values in sub-arrays 
+// console.log((Object.entries(instaUser))); // here we get all keys and values in sub-arrays 
 
-console.log(instaUser.hasOwnProperty("isLoggedIn")) 
+// console.log(instaUser.hasOwnProperty("isLoggedIn")) 
+
+
+// Object destructuring 
+
+const course = {
+    courseName : "Web development",
+    courseFees : "Free",
+    courseInstructor : "Hitesh"
+}
+
+// console.log(course.courseInstructor);
+
+// const {courseInstructor} = course // destructuring
+// console.log(courseInstructor);
+
+            //OR
+
+// const {courseInstructor: instructor} = course // we can change the name of keys
+// console.log(instructor);
+
+
+// ***************************** JSON *****************************************
+// JSON ==> javascript object notation
+
+// {
+//     "courseName" : "Web development",
+//     "courseFees" : "Free",
+//     "courseInstructor" : "Hitesh"
+// }
+
+
+    // [
+    //     {},
+    //     {},
+    //     {}
+    // ]
