@@ -16,13 +16,30 @@
 // console.log(`User Power: ${power}`);  erroe ==> power not defined bcoz we have used let keyword and ie blocked scope
 
 
-const balance  = 500 
- if (balance > 500) {
-    console.log("greater than 500");
- } else if (balance < 400) {
-    console.log("low balance");
- } else if (balance >= 500) {
-    console.log("correct balance");
- }else{
-    console.log("zero balance");
- }
+// const balance  = 500 
+//  if (balance > 500) {
+//     console.log("greater than 500");
+//  } else if (balance < 400) {
+//     console.log("low balance");
+//  } else if (balance >= 500) {
+//     console.log("correct balance");
+//  }else{
+//     console.log("zero balance");
+//  }
+
+
+// console.log(true && false); false
+// console.log(true || false); true
+// console.log(false || false); false
+
+// const userLoggedIn = true
+// const haveCard = true
+// const isLoggedinGoogle = true
+// const isLoggedinEmail = false
+
+// if (userLoggedIn && haveCard) {
+//    console.log("Allows for shopping");
+// }if (isLoggedinGoogle || isLoggedinEmail) {
+//    console.log("Give Access");
+// }
+
