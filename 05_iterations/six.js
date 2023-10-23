@@ -1,4 +1,4 @@
-//filter map and reduce
+//filter 
 
 // const coding = ["js", "html", "css", "react"]
 
