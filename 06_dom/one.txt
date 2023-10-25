@@ -1,0 +1,19 @@
+1.innerHTML: returns  text node as well as html nodes
+2.textContent : returns all text content
+3.innerText : gives the text in the selected node
+4.querySelector
+5.querySelectorAll
+6.getAttribute
+7.setAttribute
+
+innerText vs textContent
+NOTE: innerText will only show what is visible on the page. Meanwhile,
+textContent will show all the texts even if it's hidden due to any CSS property being applied to the text.
+
+querySelectorAll returns nodeList which allows us to use forEach loop on it and and 
+other selectors like getElementsByClassName, getElementsByName return
+HTMLCollection which does not allow us to use forEach loop on it.
+
+
+So by using Array.from(variable_name)  method on HTMLCollection and nodeList we can covert them into array and
+we can perform all array methods then.
