@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM | By Hitesh</title>
+</head>
+<body style="background-color: #212121; color:aliceblue">
+    <div class="parent">
+        <div class="day">Monday</div>
+        <div class="day">Tuesday</div>
+        <div class="day">Wednesday</div>
+        <div class="day">Thursday</div>
+        <div class="day">Friday</div>
+    </div>
+</body>
+        <script>
+            const getParent = document.querySelector(".parent")
+            // console.log(getParent);
+            // console.log(getParent.children);
+            // console.log(getParent.children[1].innerHTML);
+            
+
+            // for (let i = 0; i < getParent.children.length; i++) {
+            //     console.log(getParent.children[i].innerHTML);
+                
+            // }
+
+            // getParent.children[1].style.color = "red"
+            // console.log(getParent.firstElementChild);
+            // console.log(getParent.firstChild);
+            // console.log(getParent.lastElementChild);
+
+            const getChild = document.querySelector(".day")
+            // console.log(getChild);
+            // console.log(getChild.parentElement);
+            // console.log(getChild.nextSibling);
+            // console.log(getChild.nextElementSibling);
+
+            console.log("Nodes:" ,getParent.childNodes);
+        </script>
+</html>
