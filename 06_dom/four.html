@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM edit & remove</title>
+</head>
+<body style="background-color: #212121; color:aliceblue">
+    <ul class="language">
+        <li>Javascript</li>
+    </ul>
+</body>
+<script>
+    function addLanguage (langName){
+        const li = document.createElement("li")
+        li.innerHTML = `${langName}`
+        document.querySelector(".language").
+        appendChild(li)
+    }
+    addLanguage("Typescript")
+    addLanguage("Python")
+
+    function addOptiLang (langName) {
+        const li = document.createElement("li")
+        li.appendChild(document.createTextNode(langName))
+        document.querySelector(".language").appendChild(li)
+
+    }
+
+    addOptiLang("goLang")
+    addOptiLang("ReactJs")
+
+    // Edit
+    const secondLang = document.querySelector("li:nth-child(2)")
+    console.log(secondLang);
+    secondLang.innerHTML = "Mojo"
+
+    const newLi = document.createElement("li")
+    newLi.textContent = "CPP"
+    secondLang.replaceWith(newLi)
+
+    // Edit
+    const firstLi = document.querySelector("li:first-child")
+    firstLi.outerHTML = "<li>TypeScript</li>"
+
+    // remove
+    const lastLang = document.querySelector("li:last-child")
+    lastLang.remove()
+
+
+    
+</script>
+</html>
