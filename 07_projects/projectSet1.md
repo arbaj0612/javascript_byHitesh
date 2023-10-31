@@ -82,3 +82,24 @@ import './style.css';
 
 
 ```
+
+## Project 3 Solution Code
+
+[Click here](https://stackblitz.com/edit/js-digiclock)
+
+```javascript
+// Import stylesheets
+import './style.css';
+
+// Write Javascript code!
+const clock = document.getElementById("clock")
+
+// console.log(clock)
+
+ setInterval(function () {
+  let date = new Date()
+  clock.innerHTML = date.toLocaleTimeString()
+} , 1000)
+
+
+```
