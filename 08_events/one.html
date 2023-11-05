@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>html events</title>
+   <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+    <div class="events">
+        <h2>Amazing Images</h2>
+        <ul id="images">
+            <li>
+                <img id="chain" src="https://media.istockphoto.com/id/1322104312/photo/freedom-chains-that-transform-into-birds-charge-concept.jpg?s=1024x1024&w=is&k=20&c=CoqB4hDuRFuxxEZ4Fu84uhLDftgeyAtl8TXEQq-JdtM="
+                    width= "200px" alt="" />
+            </li>
+            <li>
+                <img id="2023" src="https://media.istockphoto.com/id/1405730723/photo/empty-asphalt-road-and-new-year-2023-concept-driving-on-an-empty-road-to-goals-2023-with.jpg?s=1024x1024&w=is&k=20&c=1_rrBgZsU-XRkHVCQOYW48nuzQcky-nyCEyJuorjHKk="
+                width="200px"  alt="" />
+            </li>
+            <li>
+                <img id="river" src="https://images.unsplash.com/photo-1561816544-21ecbffa09a3?auto=format&fit=crop&q=80&w=1974&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                  width="200px" alt="River image" />
+            </li>
+            <li>
+                <img id="owl" src="https://media.istockphoto.com/id/586205092/photo/burrowing-owl.jpg?s=1024x1024&w=is&k=20&c=AjFLCebGohZJesQwVTCval27hQ_aJIFczj1V89dQpX0=" 
+                 width="200px" alt=""/>
+            </li>
+            <li>
+                <a  id="link" href="https://www.google.com/">Google</a>
+            </li>
+        </ul>
+    </div>
+    <script>
+        // document.getElementById("owl").onclick = function(e){
+        //     console.log(e);
+        //     alert("Owl Clicked")
+        // }
+
+        // attachEvent()
+        // jquery - .onEventListener
+        
+        // in event objects
+        // type , timestamps , preventDefault
+        // target , toElement , srcElement,
+        // currentTarget, clientX , clientY,screenX, screenY
+        // altKey , ctrlKey , shiftKey , keyCode
+
+
+        // document.getElementById("owl").addEventListener("click" , function(e){
+        //     console.log(e);
+        //     alert("Owl clicked again")
+        // })
+
+
+        // document.getElementById("images").addEventListener("click" , function(e){
+        //     console.log("Click on ul");
+        // },false)
+        
+        
+        // document.getElementById("owl").addEventListener("click" , function(e){
+        //     e.stopPropagation()
+        //     console.log("Clicked Owl Again");
+        // },false)
+
+
+
+         document.getElementById("link").addEventListener("click" , function(e){
+             e.preventDefault()
+         })
+
+
+            // document.querySelector("#images").addEventListener("click", function(e) {
+            //     console.log(e);
+            //     const removeIt = e.target.parentNode
+            //     console.log(removeIt);
+            //     removeIt.remove()
+            // // alternate way
+            // // removeIt.parentNode.removeChild(removeIt)
+
+
+            // })
+
+            // preventing the list items to be removed after clicking on "ul"
+            document.querySelector("#images").addEventListener("click", function(e) {
+                console.log(e);
+                 if(e.target.tagName === "IMG"){
+                    let removeIt = e.target.parentNode
+                    console.log(removeIt);
+                    removeIt.remove()
+                 }
+            })
+
+    </script>
+</body>
+
+</html>
