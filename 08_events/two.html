@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async Programming</title>
+</head>
+<body>
+    <div class="container">
+        <h1>JS series</h1>
+        <button type="button" id="btn">Stop</button>
+    </div>
+</body>
+    <script>
+        // setTimeout(function() {
+        //     console.log("Hey Arbaj");
+        // }, 2000)
+
+        // const greet = function () {
+        //     console.log("Hello Momin");
+        // }
+
+        // setTimeout( greet , 2000) // here we have given the reference of the above function
+
+        
+
+        const changeText = function(){
+            document.querySelector("h1").
+            innerHTML = "Js best series"
+            console.log("Text Updated");
+        }
+
+        document.querySelector("#btn").
+        addEventListener("click" , function () {
+            clearTimeout(changeMe)
+            console.log("STOPPED");
+        })
+
+        const changeMe = setTimeout(changeText , 2000)
+
+
+       
+    
+       
+
+
+
+
+
+    </script>
+</html>
