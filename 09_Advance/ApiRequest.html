@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Api_Requests</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+
+Web APIs ==> XMLHttpRequest ==> readyState 
+
+0	UNSENT ==> Client has been created. open() not called yet.
+1	OPENED ==> 	open() has been called.
+2	HEADERS_RECEIVED ==>	send() has been called, and headers and status are available.
+3	LOADING ==>	Downloading; responseText holds partial data.
+4	DONE ==> The operation is complete.
+
+    <div class="card">
+        <div id="getData">
+            <button id="image">Get Photo</button>
+            <button id="followers">Get followers</button>
+        </div>
+    </div>
+</body>
+<script>
+
+//     const getImg = document.querySelector("#image")
+//     const getFollowers = document.querySelector("#followers")
+//     const getData = document.querySelector("#getData")
+
+
+
+//     const requestUrl = "https://api.github.com/users/hiteshchaudhary"
+//     const xhr =  new XMLHttpRequest ();
+//    xhr.open("GET" , requestUrl )
+//    xhr.onreadystatechange = function () {
+//        console.log(xhr.readyState);
+//        if (xhr.readyState === 4 ) {
+//         const data = JSON.parse(this.responseText) // we get response in string from and covert it into json
+//         console.log(data);
+//         // console.log(typeof data);  // object
+//         // console.log(data.followers);
+//         getImg.addEventListener("click" , function () {
+//             getData.innerHTML = `
+//                 <div>
+//                     <img src="https://avatars.githubusercontent.com/u/17576078?v=4"/>
+//                 </div>
+//             `
+//         } )
+
+//         getFollowers.addEventListener("click" , function() {
+//             getData.innerHTML = `
+//                 <div>${data.followers}</div>
+//             `
+//         })
+//        }
+
+//    }
+
+
+//    xhr.send()
+    const requestUrl = "https://api.github.com/users/hiteshchaudhary"
+    const xhr = new XMLHttpRequest()
+    xhr.open("GET" , requestUrl)
+    xhr.onreadystatechange = function(){
+        console.log(xhr.readyState);
+        if(xhr.readyState === 4) {
+            console.log(this.responseText)  // string form
+            const data = JSON.parse(this.responseText)
+            console.log(typeof data);
+            console.log(data.login);
+            console.log(data.id);
+        }
+
+    }
+    xhr.send()
+</script>
+</html>
