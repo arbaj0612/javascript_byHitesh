@@ -49,7 +49,7 @@ const taSupport = {
     fulltime : false , 
     __proto__ : teacher  // using __proto__ to give access of another object's properties
 }
-console.log(taSupport.takeClass); // we can access the property of the user object 
+console.log(taSupport.takeClass); // we can access the property of the teacher object 
 
 
 teacher.__proto__ = user // using __proto__ to give access of another object's properties
