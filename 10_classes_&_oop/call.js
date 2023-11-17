@@ -20,3 +20,16 @@ console.log(getUser);
 
 
 
+function heyUser(uname) {
+    this.uname = uname
+    console.log("Hey bro");
+}
+
+function getThat (uname , email, pass) {
+    heyUser.call(this,uname)
+    this.email = email
+    this.pass = pass
+}
+
+const getData = new getThat("Junaid", "aj009@cc.com" , "2322")
+ console.log(getData);
