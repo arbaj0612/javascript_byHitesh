@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Closure</title>
+</head>
+<body style="background-color: #414141;">
+    <div class="main">
+        <button id="orange">Orange</button>
+        <button id="green">Green</button>
+    </div>
+</body>
+
+<script>
+
+    // Lexical scoping
+
+
+    // function init() {
+    //     let browser = "chrome"
+    //     function displayname() {
+    //         console.log("browser name:" , browser);
+    //     }
+    //     displayname()
+    // }
+    // init()
+
+
+    // function outer() {
+    //     let username = "junaid"
+    //     function inner () {
+    //         console.log("username is:" , username);
+    //     }
+    //     function innerTwo () {
+    //         console.log("username2 is:" , username);
+    //     }
+    //     inner()
+    //     innerTwo()
+    // }
+    // outer()
+    // console.log(username);  // error : username not defined
+</script>
+
+<script>
+
+    //closure
+    function init() {
+        let username = "junaid"
+        function displayname () {
+            console.log("username is:" , username);
+        }
+        return displayname()
+    }
+    init()
+
+    
+    // document.getElementById("orange").onclick = function () {
+    //     document.body.style.backgroundColor = "orange"
+    // }
+    
+    // document.getElementById("green").onclick = function () {
+    //     document.body.style.backgroundColor = "green"
+    // }
+    
+
+    // if we want to chnage the bgcolor on too many buttons 
+    // then we are not going to write the above code again & again
+    // will create closure for that
+    
+    function changeBg (color) {
+        // document.body.style.backgroundColor = `${color}`
+
+        return function () {
+            document.body.style.backgroundColor = `${color}`
+        }
+    }
+
+    document.getElementById("orange").onclick = changeBg("orange")
+
+    document.getElementById("green").onclick = changeBg("green")
+</script>
+</html>
